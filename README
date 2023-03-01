@@ -22,4 +22,29 @@ install: composer require api
 
 ----> vue disponible /api
 
-Aller dans Entity: 
+Aller dans Entity: + l'annotation dans notre table pour que l'api prend en compte les champs.
+
+
+///////////////Dans l'api ////////////////////
+<li>{{data.albums.items.0.name}}</li>
+
+
+
+
+
+
+
+
+
+{
+  "title": "michael jackson billie jean",
+  "content": "Michael-Jackson-Billie-Jean.mp3",
+  "img": "billiejean.png",
+  "createdAt": "2023-03-01T12:57:48.454Z"
+}
+{
+  "title": "Francky Vincent Fruit de la passion",
+  "content": "Francky-Vincent-Fruit-de-la-passion.mp3",
+  "img": "Francky-Vincent.png",
+  "createdAt": "2023-03-01T12:57:48.454Z"
+}

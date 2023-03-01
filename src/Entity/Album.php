@@ -27,6 +27,9 @@ class Album
     #[ORM\Column(length: 255)]
     private ?string $content = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $img = null;
+
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
@@ -55,6 +58,18 @@ class Album
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getImg(): ?string
+    {
+        return $this->img;
+    }
+
+    public function setImg(string $img): self
+    {
+        $this->img = $img;
 
         return $this;
     }
