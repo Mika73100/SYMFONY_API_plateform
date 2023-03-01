@@ -20,3 +20,6 @@ je migre mes tables: 1 symfony console make:migration
 
 install: composer require api
 
+----> vue disponible /api
+
+Aller dans Entity: 

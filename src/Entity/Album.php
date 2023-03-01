@@ -5,7 +5,15 @@ namespace App\Entity;
 use App\Repository\AlbumRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+/////////ici j'appel l'api/////////
+use ApiPlatform\Metadata\ApiResource;
+
+
 #[ORM\Entity(repositoryClass: AlbumRepository::class)]
+
+//je rajoute l'annotation.
+#[ApiResource]
+
 class Album
 {
     #[ORM\Id]
