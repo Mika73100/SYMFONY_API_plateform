@@ -16,4 +16,7 @@ Je renseigne ma BDD dans le .env : "mysql://root:root@127.0.0.1:3306/symfonyjuke
 je migre mes tables: 1 symfony console make:migration
                      2 symfony console d:m:m
 
+//////////////////////////////API/////////////////////////////////
+
+install: composer require api
 
