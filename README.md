@@ -1,8 +1,3 @@
-Ce projet est une API construite avec **Symfony** et **API Platform**, un excellent choix pour exposer des données sous forme de web services REST ou GraphQL.
-
-Voici le `README.md` adapté pour ce type de projet backend API :
-
-```markdown
 # 🔌 Symfony API avec API Platform
 
 Ce projet est une **API RESTful construite avec Symfony** et **API Platform**, offrant une base solide pour développer une application backend rapide, sécurisée et conforme aux standards du web.
@@ -88,19 +83,6 @@ config/
 ```bash
 php bin/phpunit
 ```
-
-## 👤 Auteur
-
-**Ton Nom**  
-📧 [Ton Email]  
-🔗 [LinkedIn / GitHub / Portfolio]
-
----
-
-> Ce projet vous permet de lancer rapidement une API professionnelle avec les meilleurs outils PHP modernes.
-```
-
-Souhaite-tu maintenant que je crée un dossier compressé contenant **tous les fichiers `README.md` générés** pour tous tes projets ?
 
 ## 🙌 Remerciements
 
