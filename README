@@ -1,54 +1,89 @@
-////////////////////////Installation///////////////////////////
 
-install: 
-        1 symfony new apidemo
-        2 composer require symfony/orm-pack
-        3 composer require --dev symfony/maker-bundle
+# 🔌 Symfony API avec API Platform
 
-//////////////////////////ENTITY///////////////////////////////
+Ce projet est une **API RESTful construite avec Symfony** et **API Platform**, offrant une base solide pour développer une application backend rapide, sécurisée et conforme aux standards du web.
 
-Je crée une entity: symfony console make:entity
-                        Je crée: User
-                        Je crée: Album
+## 🚀 Fonctionnalités
 
-Je renseigne ma BDD dans le .env : "mysql://root:root@127.0.0.1:3306/symfonyjukebox?serverVersion=8&charset=utf8mb4"
+- Exposition automatique des entités via API Platform
+- Configuration CORS pour le développement cross-domain
+- Sécurité gérée avec Symfony Security
+- Documentation Swagger intégrée
+- Système de validation des données
+- Architecture extensible et propre
 
-je migre mes tables: 1 symfony console make:migration
-                     2 symfony console d:m:m
+## 🧰 Stack technique
 
-//////////////////////////////API/////////////////////////////////
+- Symfony 6+
+- API Platform
+- Doctrine ORM
+- Composer
+- MySQL / PostgreSQL / SQLite
+- Docker (optionnel)
 
-install: composer require api
+## 🔧 Installation
 
-----> vue disponible /api
+### 1. Cloner le projet
 
-Aller dans Entity: + l'annotation dans notre table pour que l'api prend en compte les champs.
+```bash
+git clone https://github.com/ton-utilisateur/SYMFONY_API_plateform.git
+cd SYMFONY_API_plateform
+```
 
+### 2. Installer les dépendances
 
-///////////////Dans l'api ////////////////////
-<li>{{data.albums.items.0.name}}</li>
+```bash
+composer install
+```
 
+### 3. Configuration de la base de données
 
+Configurer `.env.local` :
 
+```
+DATABASE_URL="mysql://user:password@127.0.0.1:3306/nom_base"
+```
 
+Puis :
 
+```bash
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+```
 
+### 4. Lancer le serveur local
 
+```bash
+symfony server:start
+```
 
+Ou avec PHP :
 
-{
-  "title": "michael jackson billie jean",
-  "content": "Michael-Jackson-Billie-Jean.mp3",
-  "img": "billiejean.png",
-  "createdAt": "2023-03-01T12:57:48.454Z"
-}
-{
-  "title": "Francky Vincent Fruit de la passion",
-  "content": "Francky-Vincent-Fruit-de-la-passion.mp3",
-  "img": "Francky-Vincent.png",
-  "createdAt": "2023-03-01T12:57:48.454Z"
-}
+```bash
+php -S localhost:8000 -t public
+```
 
+## 📘 Documentation API
+
+API Platform génère automatiquement la documentation à l'adresse :  
+[http://localhost:8000/api](http://localhost:8000/api)
+
+## 📁 Structure du projet
+
+```
+src/
+├── Entity/              # Entités Doctrine
+├── Repository/          # Requêtes personnalisées
+├── Controller/          # Contrôleurs API ou personnalisés
+config/
+├── packages/            # Configuration API Platform, sécurité, doctrine...
+```
+
+## 🧪 Tests
+
+```bash
+php bin/phpunit
+```
 
 ## 🙌 Remerciements
 
